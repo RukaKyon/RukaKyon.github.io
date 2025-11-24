@@ -103,3 +103,13 @@ footer {
     color: #666;
     font-size: 0.9rem;
 }
+
+canvas {
+    display: block;      /* 謎の隙間を消すおまじない */
+    position: fixed;     /* 画面上の位置を固定する */
+    top: 0;              /* 上端を0pxに合わせる */
+    left: 0;             /* 左端を0pxに合わせる */
+    z-index: -1;         /* 最背面（文字の後ろ）に配置する */
+    width: 100vw;        /* 横幅を画面いっぱいにする */
+    height: 100vh;       /* 縦幅を画面いっぱいにする */
+}
