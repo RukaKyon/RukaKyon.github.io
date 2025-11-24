@@ -8,13 +8,13 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   
   // キャンバスを背景として固定するためのスタイル設定
-  //canvas.position(0, 0);
-  //canvas.style('z-index', '-1'); // コンテンツの後ろに配置
-  // canvas.style('position', 'fixed'); // スクロールしても動かないように固定
-  //canvas.style('top', '0');
-  //canvas.style('left', '0');
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1'); // コンテンツの後ろに配置
+  canvas.style('position', 'fixed'); // スクロールしても動かないように固定
+  canvas.style('top', '0');
+  canvas.style('left', '0');
   
-  //noStroke();
+  noStroke();
 }
 
 function draw() {
@@ -51,7 +51,7 @@ function draw() {
       vertex(x, y);
     }
 
-    vertex(width, height); // 右下へ
+    //vertex(width, height); // 右下へ
     endShape(CLOSE);
   }
 
