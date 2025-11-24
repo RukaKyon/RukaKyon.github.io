@@ -10,7 +10,7 @@ function setup() {
   // キャンバスを背景として固定するためのスタイル設定
   canvas.position(0, 0);
   canvas.style('z-index', '-1'); // コンテンツの後ろに配置
-  canvas.style('position', 'fixed'); // スクロールしても動かないように固定
+  // canvas.style('position', 'fixed'); // スクロールしても動かないように固定
   canvas.style('top', '0');
   canvas.style('left', '0');
   
