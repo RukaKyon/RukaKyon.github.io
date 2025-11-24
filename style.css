@@ -1,12 +1,12 @@
-/* css/style.css に記述 */
 
 body {
-    font-family: "Roboto", "Segoe UI", sans-serif;
-    background-color: #1e1e1e; /* 暗いグレー */
-    color: #e0e0e0; /* 明るいグレー */
+    font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     line-height: 1.8;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -14,11 +14,11 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     
-    /* 以下を追加・変更 */
-    background-color: rgba(30, 30, 30, 0.85); /* 背景色を半透明に（0.85が不透明度） */
-    backdrop-filter: blur(5px); /* すりガラス効果（モダンなブラウザ用） */
-    border-radius: 10px; /* 角を少し丸く */
-
+    background-color: rgba(30, 30, 30, 0.85); 
+    backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 header {
@@ -30,24 +30,33 @@ h1 {
     font-size: 3rem;
     letter-spacing: 2px;
     margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #a0a0a0;
+    font-style: italic;
 }
 
 h2, h3 {
-    color: #00d1b2; /* アクセントカラー（シアン） */
+    color: #00d1b2; 
 }
 
 h2 {
     border-bottom: 1px solid #444;
     padding-bottom: 10px;
+    margin-top: 40px;
 }
 
 table {
     width: 100%;
     margin-top: 10px;
-    background-color: #2a2a2a;
+    background-color: rgba(42, 42, 42, 0.8);
     border-radius: 8px;
-    overflow: hidden; /* 角丸を有効にするため */
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden; 
 }
 
 th, td {
@@ -58,12 +67,39 @@ th, td {
 th {
     color: #00d1b2;
     text-align: left;
+    width: 30%;
 }
 
 a {
-    color: #ffdd57; /* リンクは目立つ黄色系 */
+    color: #ffdd57; 
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
 }
 
 ul {
     list-style: square;
+    padding-left: 20px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
 }
