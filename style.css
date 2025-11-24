@@ -106,10 +106,18 @@ footer {
 
 canvas {
     display: block;
-    position: fixed;   /* ここが重要：画面に固定する */
-    top: 0;            /* 上端を合わせる */
-    left: 0;           /* 左端を合わせる */
-    z-index: -1;       /* 文字の後ろ（最背面）に送る */
-    width: 100vw;      /* 横幅いっぱい */
-    height: 100vh;     /* 縦幅いっぱい */
+    /* !important をつけることで、JSの設定を無視して強制的に適用させます */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: -1;
+    
+    /* 100vwだとスクロールバーの幅を含んでしまいズレることがあるため 100% に変更 */
+    width: 100% !important;
+    height: 100% !important;
+    
+    /* 念のため、余計な余白を消す設定 */
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none; /* アニメーションがクリックの邪魔をしないようにする */
 }
